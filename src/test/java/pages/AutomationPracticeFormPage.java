@@ -25,9 +25,9 @@ public class AutomationPracticeFormPage {
         return this;
     }
 
-    public AutomationPracticeFormPage chooseBirthDate(){
+    public AutomationPracticeFormPage chooseBirthDate(String year, String month, String day){
         dateOfBirth.click();
-        calendar.chooseDate("2001", "April", "05");
+        calendar.chooseDate(year, month, day);
         return this;
     }
 }
