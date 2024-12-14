@@ -2,11 +2,13 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import pages.AutomationPracticeFormPage;
 import pages.TextBoxPage;
 
 public class BaseConfig {
 
     TextBoxPage textBoxPage = new TextBoxPage();
+    AutomationPracticeFormPage automationPracticeFormPage = new AutomationPracticeFormPage();
 
     @BeforeAll
     static void BeforeAll(){

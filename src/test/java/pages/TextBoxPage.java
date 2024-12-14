@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class TextBoxPage {
 
     String url = "/text-box";
+
     SelenideElement userName = $("#userName"),
                     userEmail = $("#userEmail"),
                     currentAddress = $("#currentAddress"),
