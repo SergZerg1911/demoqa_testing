@@ -2,7 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -14,6 +14,7 @@ public class TextBoxPage {
                     currentAddress = $("#currentAddress"),
                     permanentAddress = $("#permanentAddress"),
                     submit = $("#submit"),
+                    outputField = $("#output"),
                     outputUserNameCheck = $("#output").$("#name"),
                     outputUserEmailCheck = $("#output").$("#email"),
                     outputCurrentAddressCheck = $("#output").$("#currentAddress"),
@@ -68,4 +69,29 @@ public class TextBoxPage {
         outputPermanentAddressCheck.shouldHave(text(value));
         return this;
     };
+
+    public TextBoxPage verifyUserNameIsEmpty(){
+        outputField.shouldNotHave(text("Name:"));
+        return this;
+    }
+
+    public TextBoxPage verifyCurrentAddressIsEmpty(){
+        outputCurrentAddressCheck.shouldNotHave(text("Current Address :"));
+        return this;
+    }
+
+    public TextBoxPage verifyPermanentAddressIsEmpty(){
+        outputPermanentAddressCheck.shouldNotHave(text("Permananet Address :"));
+        return this;
+    }
+
+    public TextBoxPage verifyOutputFieldIsEmpty(){
+        outputField.shouldBe(empty);
+        return this;
+    }
+
+    public TextBoxPage verifyUserEmailBorderIsRed(){
+        userEmail.shouldHave(cssValue("color", "rgba(73, 80, 87, 1)"));
+        return this;
+    }
 }
