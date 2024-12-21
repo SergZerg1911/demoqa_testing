@@ -15,5 +15,6 @@ public class BaseConfig {
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "maxSize";
         Configuration.baseUrl = "https://demoqa.com";
+        Configuration.headless = true;
     }
 }
