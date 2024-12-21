@@ -15,6 +15,6 @@ public class BaseConfig {
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "maxSize";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.headless = true;
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 }
