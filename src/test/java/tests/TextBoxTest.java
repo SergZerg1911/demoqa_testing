@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 public class TextBoxTest extends BaseConfig{
 
-    private String userName = "Scott L Jones";
-    private String userEmail = "s.k.i.l.ig.ge.e@gmail.com";
-    private String invalidUserEmail = "s.k.i.l.ig.ge.e";
-    private String currentAddress = "4176 Rinehart Road Miami, Florida(FL), 33179";
-    private String permanentAddress = "65 Maxwell Street Hartford, Connecticut(CT), 06103";
+    private String userName = faker.name().fullName(),
+            userEmail = faker.internet().emailAddress(),
+            invalidUserEmail = "s.k.i.l.ig.ge.e",
+            currentAddress = faker.address().fullAddress(),
+            permanentAddress = faker.address().fullAddress();
 
     @Test
     void completelyFillOutTheForm(){
