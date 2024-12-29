@@ -8,7 +8,7 @@ import pages.TextBoxPage;
 
 public class BaseConfig {
 
-    Faker faker = new Faker();
+    static Faker faker = new Faker();
     TextBoxPage textBoxPage = new TextBoxPage();
     AutomationPracticeFormPage automationPracticeFormPage = new AutomationPracticeFormPage();
 
